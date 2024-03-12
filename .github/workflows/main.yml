@@ -1,0 +1,20 @@
+name: Example Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+    
+      - name: Use OpenAI Key
+        run: echo "OpenAI Key: ${{ secrets.OPENAI_KEY }}" 
+        
+      - name: Use Pinecone Key
+        run: echo "Pinecone Key: ${{ secrets.PINECONE_KEY }}"
