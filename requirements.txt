@@ -1,3 +1,4 @@
 langchain
 pinecone
 openai
+streamlit
